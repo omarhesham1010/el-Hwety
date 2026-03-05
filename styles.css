@@ -55,7 +55,12 @@ body {
     padding: 0 24px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 800;
     line-height: 1.3;
     margin-bottom: 1rem;
@@ -504,7 +509,9 @@ a {
     opacity: 1;
 }
 
-.stat i, .stat h4, .stat p {
+.stat i,
+.stat h4,
+.stat p {
     position: relative;
     z-index: 1;
 }
@@ -608,7 +615,7 @@ a {
     color: var(--primary-color);
 }
 
-.service-card > p {
+.service-card>p {
     text-align: center;
     margin-bottom: 24px;
     color: var(--text-secondary);
@@ -960,10 +967,53 @@ a {
 }
 
 .footer-bottom {
-    text-align: center;
     padding-top: 32px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--gray-300);
+}
+
+.footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-bottom-container p {
+    margin: 0;
+    color: var(--gray-300);
+    font-size: 1rem;
+}
+
+.developer-credit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    direction: rtl;
+}
+
+.developer-credit span {
+    font-size: 0.95rem;
+    color: var(--gray-300);
+    color: #05BFDB;
+}
+
+.dev-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dev-social-icons a {
+    color: var(--gray-300);
+    font-size: 17px;
+    transition: var(--transition);
+}
+
+.dev-social-icons a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-2px);
 }
 
 @keyframes fadeInUp {
@@ -971,6 +1021,7 @@ a {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -978,7 +1029,9 @@ a {
 }
 
 @media (max-width: 1024px) {
-    .about-content, .contact-content {
+
+    .about-content,
+    .contact-content {
         grid-template-columns: 1fr;
         gap: 32px;
     }
@@ -1030,7 +1083,8 @@ a {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    .services-grid, .gallery-grid {
+    .services-grid,
+    .gallery-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1060,8 +1114,15 @@ a {
         font-size: 1.25rem;
     }
 
-    .about-text, .service-card {
+    .about-text,
+    .service-card {
         padding: 32px 24px;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -1119,7 +1180,10 @@ a {
         margin-bottom: 48px;
     }
 
-    .about, .services, .gallery, .contact {
+    .about,
+    .services,
+    .gallery,
+    .contact {
         padding: 60px 0;
     }
 
